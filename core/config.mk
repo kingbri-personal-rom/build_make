@@ -226,13 +226,13 @@ endif
 # are specific to the user's build configuration.
 include $(BUILD_SYSTEM)/envsetup.mk
 
-include $(TOPDIR)vendor/extras/configs/BoardConfigKernel.mk
+include $(TOPDIR)vendor/kingbri/configs/BoardConfigKernel.mk
 
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-include $(TOPDIR)vendor/extras/build/core/BoardConfigQcom.mk
+include $(TOPDIR)vendor/kingbri/build/core/BoardConfigQcom.mk
 endif
 
-include $(TOPDIR)vendor/extras/configs/BoardConfigSoong.mk
+include $(TOPDIR)vendor/kingbri/configs/BoardConfigSoong.mk
 
 # Pruned directory options used when using findleaves.py
 # See envsetup.mk for a description of SCAN_EXCLUDE_DIRS
@@ -1190,6 +1190,6 @@ include $(BUILD_SYSTEM)/dumpvar.mk
 
 # QCOM targets and pathmap
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-include $(TOPDIR)vendor/extras/build/core/pathmap.mk
-include $(TOPDIR)vendor/extras/build/core/qcom_target.mk
+include $(TOPDIR)vendor/kingbri/build/core/pathmap.mk
+include $(TOPDIR)vendor/kingbri/build/core/qcom_target.mk
 endif
